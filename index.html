@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Lien Robozzle  http://www.robozzle.com/user.aspx?name=hysterias -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Wild Circus</title>
+<link rel="stylesheet" href="style.css" type="text/css" /> 
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="http://sorgalla.com/jcarousel/dist/jquery.jcarousel.min.js"></script>
+
+
+<script>
+jQuery("document").ready(function($){
+	
+	var nav = $('.nav-container');
+	
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 400) {
+			nav.addClass("f-nav");
+		} else {
+			nav.removeClass("f-nav");
+		}
+	});
+ 
+});
+
+$(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+
+(function($) {
+    $(function() {
+        $('.jcarousel').jcarousel();
+
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination();
+    });
+})(jQuery);
+
+
+</script>
+
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<div class="header">
+			<a href="" title="Wild Circus">
+				<h1 class="logo">Wild Circus</h1>
+			</a>
+		</div>
+		
+		<div class="nav-container">
+			<div class="nav">
+				<ul>
+					<li><a href="./">Home</a></li>
+					<li><a href="#story">Story</a></li>
+					<li><a href="#artist">Our Artists</a></li>
+					<li><a href="#resa">Circuit</a></li>
+					<li><a href="#follow">Follow us</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+			
+		<div class="container">	
+			<div class="main-content">	
+
+			
+			
+			<div id="home" class="page">
+				<h1 style="height: 50px;">Welcome to Wild Circus</h1>
+					<div class="jcarousel-wrapper">
+						<div class="jcarousel">
+							<ul>
+								<li><img src="img/slider/img1.jpg" width="600" height="400" alt=""></li>
+								<li><img src="img/slider/img2.jpg" width="600" height="400" alt=""></li>
+								<li><img src="img/slider/img3.jpg" width="600" height="400" alt=""></li>
+								<li><img src="img/slider/img4.jpg" width="600" height="400" alt=""></li>
+								<li><img src="img/slider/img5.jpg" width="600" height="400" alt=""></li>
+								
+							</ul>
+						</div>
+
+
+						<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+						<a href="#" class="jcarousel-control-next">&rsaquo;</a>
+						
+						<p class="jcarousel-pagination">
+							
+						</p>
+					</div>
+			</div>
+			
+			<div id="story" class="page">
+				<h1>Wild Story</h1>
+				Wild Circus existe depuis 1789 crée a l'origine part le Duc de Hérios en France.<br />
+				Pendant des années la compagnie parcouru l'europe a la recherche de nouveau talent.<br />
+				<br /> 
+				Il fut l'un des premiers cirque a traversé l'Atlantique pour partager avec le public américain l'art ancien du cirque.<br />
+				<br /> 
+				Bien des années plus tard la compagnie decida traversé le pacifique et parcourir l'Asie et donna meme une representation unique dans la cité interdite pour l'emprereur chinois.<br />
+				Fort de ces années passé a l'étranger le Wild Circus propose des numeros toujour plus innovant et spectaculaire.<br />
+				<br /> 
+				Depuis 20 ans le cirque parcour le globe a la recherche de nouveau talent, la compagnie compte parmis ces rang plus de 120 personnes dont une trentaine d'artiste de tout age et de tout origine.
+			</div>
+			
+			<div id="artist" class="page">
+				<h1>Our Artists</h1>
+				
+				<div class="pres_artist">
+				<div class="photo_left"><img src="img/artiste1.jpg" style="width:200px; margin: 10px;" class="photo" />
+				<h2><img src="img/blank.png" class="flag flag-ru" /> Stephanie Apalkov</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="pres_artist">
+				<div class="photo_right"><img src="img/artiste2.jpg" style="width:200px; margin: 10px;" class="photo" />
+				<h2><img src="img/blank.png" class="flag flag-vn" />Anh Tuấn Duong</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="pres_artist">
+				<div class="photo_left"><img src="img/artiste3.jpg" style="width:200px; margin: 10px;" class="photo" />
+				<h2><img src="img/blank.png" class="flag flag-se" /> Brian Opedal</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="pres_artist">
+				<div class="photo_right"><img src="img/no_photo.png" style="width:200px; margin: 10px;" class="photo" />
+				<h2>Clown</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				</div>
+				<div class="clear"></div>
+
+				
+			</div>
+			<div class="space"></div>
+			
+			<div id="resa" class="page">
+				<h1>Wild Tour 2018</h1>
+				
+
+<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">Afrique</li>
+		<li class="tab-link" data-tab="tab-2">Amérique</li>
+		<li class="tab-link" data-tab="tab-3">Asie</li>
+		<li class="tab-link" data-tab="tab-4">Europe</li>
+		<li class="tab-link" data-tab="tab-5">Australie et Océanie</li>
+	</ul>
+
+	<div id="tab-1" class="tab-content current">
+
+		<ul class="pays">
+		<li>
+			<div class="tooltip">Algérie <span class="tooltiptext"><h2>Alger</h2> from 15 to 17/01/2018</span></div>
+		</li>
+		<li>
+			<div class="tooltip">Cameroun <span class="tooltiptext"><h2>Yaoundé</h2> from 30 to 02/02/2018</span>
+			</div>
+		</li>
+		<li>
+			<div class="tooltip">Egypte <span class="tooltiptext"><h2>Le Caire</h2> from  09 to 11/02/2018</span>
+			</div>
+		</li>
+		<li>
+			<div class="tooltip">Maroc <span class="tooltiptext"><h2>Rabat</h2> from 14 to 16/02/2018</span>
+			</div>
+		</li>
+		<li>
+			<div class="tooltip">Reunion <span class="tooltiptext"><h2>Saint-Denis</h2> from 28 to 01/03/2018</span>
+			</div>
+		</li>
+		<li>
+			<div class="tooltip">Sénégal <span class="tooltiptext"><h2>Dakar</h2> from 10 to 12/01/2018</span>
+			</div>
+		</li>
+
+		
+		</ul>
+		
+	</div>
+	<div id="tab-2" class="tab-content">
+		<p>No scheduled dates</p>
+	</div>
+	<div id="tab-3" class="tab-content">
+		<p>No scheduled dates</p>
+	</div>
+	<div id="tab-4" class="tab-content">
+		<p>No scheduled dates</p>
+	</div>
+	<div id="tab-5" class="tab-content">
+		<p>No scheduled dates</p>
+	</div>			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<div class="space"></div>
+			<div id="follow" class="page">
+				<h1>Follow us</h1>
+				
+				<img src="img/facebook.png" alt="">
+				<img src="img/google.png" alt="">
+				<img src="img/twitter.png" alt="">
+				<img src="img/youtube.png" alt="">
+				
+				
+			</div>
+			<div class="space"></div>
+			
+
+
+			
+
+			
+
+			
+			
+			
+			
+			
+			</div>
+		</div>
+		
+		<div class="footer">
+Create by <a href="http://www.robozzle.com/user.aspx?name=hysterias" target="_blank">Hystérias</a> 
+		</div>
+		
+	</div>
+</body>
+</html>
+
