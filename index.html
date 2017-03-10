@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- Lien Robozzle  http://www.robozzle.com/user.aspx?name=hysterias -->
-
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Wild Circus</title>
@@ -10,20 +9,9 @@
 <script type="text/javascript" src="http://sorgalla.com/jcarousel/dist/jquery.jcarousel.min.js"></script>
 
 
+
 <script>
-jQuery("document").ready(function($){
-	
-	var nav = $('.nav-container');
-	
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 400) {
-			nav.addClass("f-nav");
-		} else {
-			nav.removeClass("f-nav");
-		}
-	});
- 
-});
+
 
 $(document).ready(function(){
 	
@@ -38,6 +26,21 @@ $(document).ready(function(){
 	})
 
 })
+
+jQuery("document").ready(function($){
+	
+	var nav = $('.nav-container');
+	
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 400) {
+			nav.addClass("f-nav");
+		} else {
+			nav.removeClass("f-nav");
+		}
+	});
+ 
+});
+
 
 (function($) {
     $(function() {

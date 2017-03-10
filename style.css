@@ -171,13 +171,13 @@ min-height: 500px;
 
 .photo_left p{
 	padding-right: 20px;
-	text-align: justify;
+	text-align: left;
 	min-height: 220px;
 	/*background-color: rgba(255, 0, 46, 1);*/
 }
 .photo_right p{
 	padding-left: 20px;
-	text-align: justify;
+	text-align: right;
 	min-height: 220px;
 	/*background-color: rgba(255, 0, 46, 1);*/
 }
@@ -282,7 +282,7 @@ height:38px;
     width: 30px;
     height: 30px;
     text-align: center;
-    background: #4E443C;
+    background: #b32029;
     color: #fff;
     text-decoration: none;
     text-shadow: 0 0 1px #000;
@@ -326,12 +326,12 @@ height:38px;
     text-decoration: none;
     display: inline-block;
     
-    font-size: 11px;
+    font-size: 12px;
     line-height: 14px;
     min-width: 14px;
     
-    background: #fff;
-    color: #4E443C;
+    background: #b32029;
+    color: #2E2E2E;
     border-radius: 14px;
     padding: 3px;
     text-align: center;
@@ -342,7 +342,7 @@ height:38px;
 }
 
 .jcarousel-pagination a.active {
-    background: #4E443C;
+    background: #2E2E2E;
     color: #fff;
     opacity: 1;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
